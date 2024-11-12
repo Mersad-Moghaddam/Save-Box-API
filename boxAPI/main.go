@@ -16,6 +16,7 @@ type DataModel struct {
 
 type Box struct {
 	ID          string  `json:"id"`
+	UserId      int     `json:"userId"`
 	Name        string  `json:"name"`
 	Description string  `json:"description"`
 	Amount      float64 `json:"amount"`
@@ -24,6 +25,7 @@ type Box struct {
 
 type Transaction struct {
 	ID     string  `json:"id"`
+	UserId int     `json:"userId"`
 	BoxID  string  `json:"boxId"`
 	Amount float64 `json:"amount"`
 	Type   string  `json:"type"`
