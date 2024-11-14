@@ -14,13 +14,16 @@ This is a backend API service built in Go, using Gorilla Mux for routing, to man
 ### Prerequisites
 
 - Go (>=1.16)
+- 
 - Gorilla Mux library
 
 ### Installation
 
 1. Clone the repository:
+2. 
    git clone https://github.com/yourusername/box-management-api.git
    cd box-management-api
+   
 Install dependencies:
 
 go get -u github.com/gorilla/mux
@@ -30,16 +33,23 @@ Running the Server
 To start the server, run:
 
 go run main.go
+
 The API will be available at http://localhost:8080.
 
 API Endpoints
 GET /users - Retrieve all users
+
 POST /users - Create a new user
+
 GET /boxes - Retrieve all boxes
+
 POST /boxes - Create a new box
+
 POST /transactions - Create a transaction (deposit or withdrawal)
+
 (Additional endpoints can be added as needed.)
 
-Contributing
+Contributing:
+
 Feel free to open issues and submit pull requests to improve this project.
 
