@@ -1,39 +1,45 @@
-boxAPI
-A RESTful API for managing boxes and transactions.
 
-Table of Contents
-Introduction
-Getting Started
-Endpoints
-API Documentation
+# Box Management API
+
+This is a backend API service built in Go, using Gorilla Mux for routing, to manage users, transactions, and boxes—virtual containers for funds or items. Each user has personal details, boxes store financial data, and transactions log deposit and withdrawal activities, providing a structured system for user account and transaction management.
+
+## Features
+
+- **User Management**: Add, update, and delete users with unique IDs, names, and emails.
+- **Box Management**: Manage virtual boxes with an ID, name, description, balance, and amount for storing funds or items.
+- **Transaction Logging**: Log and retrieve transactions (deposits and withdrawals) associated with each box.
+
+## Getting Started
+
+### Prerequisites
+
+- Go (>=1.16)
+- Gorilla Mux library
+
+### Installation
+
+1. Clone the repository:
+   git clone https://github.com/yourusername/box-management-api.git
+   cd box-management-api
+Install dependencies:
+
+go get -u github.com/gorilla/mux
+
+Running the Server
+
+To start the server, run:
+
+go run main.go
+The API will be available at http://localhost:8080.
+
+API Endpoints
+GET /users - Retrieve all users
+POST /users - Create a new user
+GET /boxes - Retrieve all boxes
+POST /boxes - Create a new box
+POST /transactions - Create a transaction (deposit or withdrawal)
+(Additional endpoints can be added as needed.)
+
 Contributing
-License
-Introduction
-boxAPI is a simple RESTful API for managing boxes and transactions. It provides endpoints for creating, reading, updating, and deleting boxes and transactions.
+Feel free to open issues and submit pull requests to improve this project.
 
-Getting Started
-To get started with boxAPI, follow these steps:
-
-Clone the repository: git clone https://github.com/mersad-moghaddam/boxAPI.git
-Install dependencies: go get -u github.com/gorilla/mux
-Run the API: go run main.go
-Endpoints
-The following endpoints are available:
-
-GET /boxes: Get all boxes
-GET /boxes/{id}: Get a box by ID
-POST /boxes: Create a new box
-PATCH /boxes/{id}/balance: Update a box balance
-DELETE /boxes/{id}: Delete a box
-GET /transactions: Get all transactions
-GET /transactions/{id}: Get a transaction by ID
-POST /transactions: Create a new transaction
-GET /all-data: Get all data
-API Documentation
-For more information on the API endpoints and parameters, see the API Documentation.
-
-Contributing
-Contributions are welcome! If you'd like to contribute to boxAPI, please fork the repository and submit a pull request.
-
-License
-boxAPI is licensed under the MIT License. See the LICENSE file for more information.
